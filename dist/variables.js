@@ -17,3 +17,13 @@ const arr1 = [1, 2, 3, 4];
 console.log(arr1);
 const arr2 = ["ab", "cd", "ef"];
 console.log(arr2);
+//tuples
+let arr3 = [false, 12, "hey"];
+//enum
+var Human;
+(function (Human) {
+    Human["name"] = "Aadeesh";
+    Human[Human["age"] = 21] = "age";
+})(Human || (Human = {}));
+;
+console.log(Human.age);

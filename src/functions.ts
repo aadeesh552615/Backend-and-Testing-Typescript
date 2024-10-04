@@ -2,23 +2,19 @@
 function printHello(a: string): string {
   return a;
 }
-type inputs = (n: number, m: number) => number;
-const product: inputs = (n, m) => {
-  return n * m;
-};
 
 // console.log(product(5, 5));
 
 //callback and type functions in ts
 type GreetFunction = (a: string) => string;
-function greeter(greet: GreetFunction): string {
-  return greet("Hello Typescript!");
+const greeter = (greet: GreetFunction): string => {
+  return greet("Greet Typescript greeting!");
 }
-function printToConsole(a: string): string {
+function greet(a: string): string {
   return a;
 }
 
-// console.log(greeter(printToConsole));
+console.log(greeter(greet));
 
 //assigning default parameter
 // type multiply = (m: number, n: number, l?: number) => number;
@@ -42,7 +38,7 @@ type Product = {
   price: number;
 };
 
-type getData = (product: Product) => void;
+type getData = (p : Product) => void;
 const displayData: getData = (product) => {
   console.log(product);
 };
@@ -54,15 +50,15 @@ const product1: Product = {
 displayData(product1);
 
 //reduce function
-const arr: Array<number> = [1, 2, 3, 4];
-const add = (accum: number, value: number): number => {
-  return accum + value;
-};
-const result: number = arr.reduce(add, 5);
-console.log(result);
+// const arr: Array<number> = [1, 2, 3, 4];
+// const add = (accum: number, value: number): number => {
+//   return accum + value;
+// };
+// const result: number = arr.reduce(add, 5);
+// console.log(result);
 
-const isEven = (x: number): boolean => {
-  return x % 2 === 0;
-};
+// const isEven = (x: number): boolean => {
+//   return x % 2 === 0;
+// };
 
-console.log(R.find(isEven, arr));
+// console.log(R.find(isEven, arr));

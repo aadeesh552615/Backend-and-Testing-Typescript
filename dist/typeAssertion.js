@@ -1,0 +1,12 @@
+"use strict";
+let form = document.getElementById("myForm");
+let formInp = document.querySelector("#formInp");
+form.onsubmit = (event) => {
+    event.preventDefault();
+    const value = Number(formInp.value);
+    console.log(value);
+    const h2 = document.createElement("h2");
+    h2.textContent = (value + 20).toString();
+    const body = document.querySelector("body");
+    body.append(h2);
+};
